@@ -23,16 +23,38 @@
 
 //За допомогою циклу for додайте всі парні числа від min до max
 
-function sumNumber(min, max) {
-    let sum = 0
-    for (let i = min; i <= max; i++) {
-        
-        if (i % 2 !== 0) {
-            continue
-        }
-        sum += i
-   
-    }
- return sum
-}
-console.log (sumNumber(0, 50))
+// function sumNumber(min, max) {
+//     let sum = 0
+//     for (let i = min; i <= max; i++) {
+
+//         if (i % 2 !== 0) {
+//             continue
+//         }
+//         sum += i
+
+//     }
+//  return sum
+// }
+// console.log (sumNumber(0, 50))
+
+// task 3
+
+//Якщо число ділитися на 3 повертати
+//fizz якщо ділитися на 5 повертати buzz
+//Якщо ділитися на 3 і на 5 повернути fizzbuzz
+// function message(number) {
+//   for (let i = 0; i < number; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fizzbuzz");
+//     } else if (i % 5 === 0) {
+//       console.log("buzz");
+//     } else if (i % 3 === 0) {
+//       console.log("fizz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+//   return number;
+// }
+
+// console.log(message(35));
