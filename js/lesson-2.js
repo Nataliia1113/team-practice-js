@@ -185,3 +185,18 @@ const fruits = [
 const toDiscount = fruits.map((fruit, index) => ({...fruit, price: fruit.price * 0.8, id: index+1}))
 console.log(toDiscount)
 
+//TODO:==============================================
+//Повернути об'єкт у якому вказується кількість тегів
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const status = tweets.flatMap(tweet => {
+  console.log(tweet)
+  return tweet.tags
+})
+console.log(status)
