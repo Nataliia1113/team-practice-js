@@ -90,13 +90,40 @@ const users = [
 // console.log(getUserNames(usersData))
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
-const getUserNames = (arr) => arr.map((user) => user.name);
-console.log(getUserNames(users));
+// const getUserNames = (arr) => arr.map((user) => user.name);
+// console.log(getUserNames(users));
 
 //TODO:==============================================
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 
-const getUsersWithEyeColor = (users, color) =>
-  users.filter((user) => user.eyeColor === color);
-console.log(getUsersWithEyeColor(users, "blue"));
+// const getUsersWithEyeColor = (users, color) =>
+//   users.filter((user) => user.eyeColor === color);
+// console.log(getUsersWithEyeColor(users, "blue"));
+
+//TODO:==============================================
+// Отримати масив імен користувачів за статтю (поле gender) за допомогою reduce
+// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+// const getUsersWithGender = (users, gender) =>
+//   users.reduce((arr, item) => {
+//     if (item.gender === gender) {
+//       arr.push(item.name);
+//     }
+//     return arr;
+//   }, []);
+
+// console.log(getUsersWithGender(users, "male"));
+
+//TODO:==============================================
+// Отримати масив користувачів віком від min до max
+// console.log (getUsersWithAge (users, 20, 30));
+// [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
+// console.log (getUsersWithAge (users, 30, 40));
+// [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
+
+// const getUsersWithAge = (users, min, max) =>
+//   users.filter((user) => user.age > min && user.age < max);
+
+// console.log(getUsersWithAge(users, 20, 30));
+// console.log(getUsersWithAge(users, 30, 40));
