@@ -88,32 +88,91 @@ const users = [
 // Отримати масив імен користувачів за статтю (поле gender) за допомогою reduce
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
-function getUsersWithGender(arr, gender) {
-  return arr.reduce((acc, user) => {
-    if (user.gender === gender) {
-      acc.push(user.name);
-    }
-    return acc;
-  }, []);
-}
+// function getUsersWithGender(arr, gender) {
+//   return arr.reduce((acc, user) => {
+//     if (user.gender === gender) {
+//       acc.push(user.name);
+//     }
+//     return acc;
+//   }, []);
+// }
 
-console.log(getUsersWithGender(users, "male"));
+// console.log(getUsersWithGender(users, "male"));
 
 //TODO:==============================================
 // Отримати масив імен всіх користувачів (поле name).
 // console.log(getUserNames(usersData))
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+
+// function getUserNames(users) {
+//   return users.map((user) => user.name);
+// }
+
+// // console.log(getUserNames(usersData));
+// console.log(getUserNames(users));
+
+// Version 2
+// function getUserNames(users) {
+//   return users.reduce((acc, user) => {
+//     acc.push(user.name);
+//     return acc;
+//   }, []);
+// }
+
+// console.log(getUserNames(users));
+
+// Version 3
+// function getUserNames(users) {
+//   const userNames = [];
+//   users.forEach((user) => userNames.push(user.name));
+//   return userNames;
+// }
+
+// console.log(getUserNames(users));
+
 //TODO:==============================================
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+//
+
+// function getUsersWithEyeColor(users, eyes) {
+//   return users.filter((user) => user.eyeColor === eyes);
+// }
+
+// console.log(getUsersWithEyeColor(users, "blue"));
 
 //TODO:==============================================
 // Отримати користувача (не масив) по email (поле email, він унікальний).
 // console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {об'єкт користувача Sheree Anthony}
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
+
+// function getUserWithEmail(user, mail) {
+//   const userMail = users.filter((user) => user.email === mail);
+//   return userMail.length > 0 ? userMail[0] : null;
+// }
+
+// console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+// console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
+
+// VERSION 2
+
+// function getUserWithEmail(user, mail) {
+//   return users.find((user) => user.email === mail);
+// }
+
+// console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+// console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
+
 //TODO:==============================================
 // Отримати масив користувачів віком від min до max
 // console.log (getUsersWithAge (users, 20, 30));
 // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
 // console.log (getUsersWithAge (users, 30, 40));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
+
+// function getUsersWithAge(user, minAge, maxAge) {
+//   return users.filter((user) => user.age >= minAge && user.age <= maxAge);
+// }
+
+// console.log(getUsersWithAge(users, 20, 30));
+// console.log(getUsersWithAge(users, 30, 40));
